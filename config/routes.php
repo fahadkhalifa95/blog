@@ -67,8 +67,14 @@ Router::scope('/', function (RouteBuilder $routes) {
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
-    $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+    $routes->connect('/pages/*', ['controller' => 'Tests', 'action' => 'index']);
+    $routes->connect('/template',['controller'=>'Products','action'=>'view']);
+    $routes->connect('/users/add', ['controller' => 'Users', 'action' => 'add']);
+    $routes->connect('/logex/',['controller'=>'Logexs','action'=>'index']);
+    $routes->connect('/fahad/*', ['controller' => 'suns', 'action' => 'view']);
 
+    $routes->connect('/locale',['controller'=>'Localizations','action'=>'index']);
+    $routes->connect('/users', ['controller' => 'User1', 'action' => 'index']);
     /**
      * Connect catchall routes for all controllers.
      *
