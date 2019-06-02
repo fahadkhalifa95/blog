@@ -75,6 +75,13 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     $routes->connect('/locale',['controller'=>'Localizations','action'=>'index']);
     $routes->connect('/users', ['controller' => 'User1', 'action' => 'index']);
+
+    $routes->connect('/users/add', ['controller' => 'Users', 'action' => 'add']) ;
+
+    $routes->connect('/login',['controller'=>'Logins','action'=>'index']);
+    $routes->connect('/alistapart/*', ['controller' => 'Alistapart', 'action' => 'display']);
+    $routes->connect('/Daily Ethical Design /*', ['controller' => 'DailyEthicalDesign ', 'action' => 'view']);
+
     /**
      * Connect catchall routes for all controllers.
      *
