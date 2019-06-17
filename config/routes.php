@@ -67,7 +67,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
-    $routes->connect('/pages/*', ['controller' => 'Tests', 'action' => 'index']);
+    $routes->connect('/pages', ['controller' => 'Tests', 'action' => 'index']);
     $routes->connect('/template',['controller'=>'Products','action'=>'view']);
     $routes->connect('/users/add', ['controller' => 'Users', 'action' => 'add']);
     $routes->connect('/logex/',['controller'=>'Logexs','action'=>'index']);
@@ -75,13 +75,15 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     $routes->connect('/locale',['controller'=>'Localizations','action'=>'index']);
     $routes->connect('/users', ['controller' => 'User1', 'action' => 'index']);
+    $routes->connect('/articles',['controller'=>'Article','action'=> 'view']);
 
+    $routes->connect('/articles/add',['controller'=>'Article','action'=> 'add']);
     $routes->connect('/users/add', ['controller' => 'Users', 'action' => 'add']) ;
 
     $routes->connect('/login',['controller'=>'Logins','action'=>'index']);
     $routes->connect('/alistapart/*', ['controller' => 'Alistapart', 'action' => 'display']);
     $routes->connect('/Daily Ethical Design /*', ['controller' => 'DailyEthicalDesign ', 'action' => 'view']);
-
+    $routes->connect('/users/add', ['controller' => 'Users', 'action' => 'add']);
     /**
      * Connect catchall routes for all controllers.
      *
